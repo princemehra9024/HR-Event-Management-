@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HR Event Management</title>
+
+    <!-- favicon-->
+    <link rel="shortcut icon" href="./img/logo 1.png" type="image/svg+xml">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="About us.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Fullscreen Image Viewer -->
+<div class="fullscreen-viewer" id="fullscreenViewer">
+    <div class="fullscreen-close" onclick="closeFullscreen()">
+        <i class="fas fa-times"></i>
+    </div>
+    <img src="" alt="Fullscreen Image" id="fullscreenImage">
+</div>
+
+<!-- Navbar Section -->  
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/logo 1.png" alt="HR Event Management Logo" width="65" height="65">
+            <div class="brand-content">
+                <span class="brand-text">HR Events</span>
+                <span class="brand-tagline">Creating Magical Moments</span>
+            </div>
+        </a>
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="About us.html">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FAQ.html">
+                        <i class="fas fa-question-circle"></i> FAQ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">
+                        <i class="fas fa-images"></i> Gallery
+                    </a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="btn btn-book-now" href="contact us.html">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Hero with Particles -->
+<section class="page-hero">
+    <div class="particles-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="container">
+            <div class="hero-text">
+                <div class="hero-badge-wrapper">
+                    <span class="hero-badge">
+                        <i class="fas fa-star"></i> Discover Our Story
+                    </span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">About</span>
+                    <span class="title-highlight">HR Events</span>
+                </h1>
+                <p class="hero-subtitle">Crafting Unforgettable Memories Since 2015</p>
+                <div class="hero-breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current">About Us</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-shape">
+        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff" d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,80C672,85,768,75,864,64C960,53,1056,43,1152,42.7C1248,43,1344,53,1392,58.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Company Stats Ticker -->
+<section class="stats-ticker">
+    <div class="container">
+        <div class="ticker-wrapper">
+            <div class="ticker-item">
+                <div class="ticker-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="ticker-content">
+                    <h3 class="ticker-number" data-count="500">0</h3>
+                    <p>Events Delivered</p>
+                </div>
+            </div>
+            <div class="ticker-divider"></div>
+            <div class="ticker-item">
+                <div class="ticker-icon">
+                    <i class="fas fa-smile-beam"></i>
+                </div>
+                <div class="ticker-content">
+                    <h3 class="ticker-number" data-count="450">0</h3>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+            <div class="ticker-divider"></div>
+            <div class="ticker-item">
+                <div class="ticker-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="ticker-content">
+                    <h3 class="ticker-number" data-count="15">0</h3>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+            <div class="ticker-divider"></div>
+            <div class="ticker-item">
+                <div class="ticker-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="ticker-content">
+                    <h3 class="ticker-number" data-count="50">0</h3>
+                    <p>Team Members</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story - Split Layout -->
+<section class="our-story-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="story-images">
+                    <div class="story-image-main" onclick="openFullscreen('./img/1745475708557.png')">
+                        <img src="./img/1745475708557.png" alt="HR Events Story">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="story-badge-float">
+                        <div class="badge-inner">
+                            <h3>10+</h3>
+                            <p>Years</p>
+                        </div>
+                    </div>
+                    <div class="story-shape-1"></div>
+                    <div class="story-shape-2"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="story-content">
+                    <div class="section-label">
+                        <span class="label-icon"><i class="fas fa-bookmark"></i></span>
+                        <span class="label-text">Our Journey</span>
+                    </div>
+                    <h2 class="section-title-modern">Creating <span class="highlight">Magic</span> Since 2015</h2>
+                    <div class="title-underline"></div>
+                    
+                    <p class="story-lead">HR Event Management was born from a simple yet powerful passion: transforming ordinary moments into extraordinary memories.</p>
+                    
+                    <div class="story-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>2015 - The Beginning</h4>
+                                <p>Started with a small team and big dreams in Mumbai</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>2018 - Expansion</h4>
+                                <p>Grew to 50+ events annually with 200+ satisfied clients</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>2025 - Industry Leader</h4>
+                                <p>500+ events completed, 15 awards, and trusted across India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-highlights">
+                        <div class="highlight-box">
+                            <i class="fas fa-award"></i>
+                            <span>15+ Awards</span>
+                        </div>
+                        <div class="highlight-box">
+                            <i class="fas fa-users"></i>
+                            <span>50+ Experts</span>
+                        </div>
+                        <div class="highlight-box">
+                            <i class="fas fa-handshake"></i>
+                            <span>200+ Partners</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Vision - Card Grid -->
+<section class="mission-vision-section">
+    <div class="container">
+        <div class="section-header-center">
+            <div class="section-label-center">
+                <span class="label-icon"><i class="fas fa-rocket"></i></span>
+                <span class="label-text">What Drives Us</span>
+            </div>
+            <h2 class="section-title-modern">Our <span class="highlight">Mission</span> & Vision</h2>
+            <div class="title-underline-center"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="mv-card mission-card">
+                    <div class="mv-card-header">
+                        <div class="mv-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                    </div>
+                    <div class="mv-card-body">
+                        <p>To deliver exceptional event experiences that exceed expectations through creativity, innovation, and meticulous attention to detail.</p>
+                        <div class="mv-features">
+                            <div class="mv-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Flawless Execution</span>
+                            </div>
+                            <div class="mv-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Personalized Service</span>
+                            </div>
+                            <div class="mv-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Lasting Relationships</span>
+                            </div>
+                            <div class="mv-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Continuous Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mv-card vision-card">
+                    <div class="mv-card-header">
+                        <div class="mv-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                    </div>
+                    <div class="mv-card-body">
+                        <p>To become India's most trusted and innovative event management company, setting new standards of excellence in the industry.</p>
+                        <div class="mv-features">
+                            <div class="mv-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Industry Leadership</span>
+                            </div>
+                            <div class="mv-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Sustainable Practices</span>
+                            </div>
+                            <div class="mv-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Pan-India Presence</span>
+                            </div>
+                            <div class="mv-feature">
+                                <i class="fas fa-check"></i>
+                                <span>Excellence Always</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us - Icon Grid -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="section-header-center">
+            <div class="section-label-center">
+                <span class="label-icon"><i class="fas fa-star"></i></span>
+                <span class="label-text">Why We're Different</span>
+            </div>
+            <h2 class="section-title-modern">Why Choose <span class="highlight">HR Events?</span></h2>
+            <div class="title-underline-center"></div>
+            <p class="section-subtitle-modern">What makes us the preferred choice for memorable events</p>
+        </div>
+
+        <div class="value-grid">
+            <div class="value-card-modern">
+                <div class="value-card-inner">
+                    <div class="value-icon-modern">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Creative Excellence</h3>
+                    <p>Fresh, innovative ideas that create trends rather than follow them.</p>
+                </div>
+            </div>
+
+            <div class="value-card-modern">
+                <div class="value-card-inner">
+                    <div class="value-icon-modern">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Attention to Detail</h3>
+                    <p>Meticulous planning ensures every element is perfect.</p>
+                </div>
+            </div>
+
+            <div class="value-card-modern">
+                <div class="value-card-inner">
+                    <div class="value-icon-modern">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Reliability & Trust</h3>
+                    <p>450+ happy clients prove we deliver on our promises.</p>
+                </div>
+            </div>
+
+            <div class="value-card-modern">
+                <div class="value-card-inner">
+                    <div class="value-icon-modern">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Budget Friendly</h3>
+                    <p>Premium quality without breaking your budget.</p>
+                </div>
+            </div>
+
+            <div class="value-card-modern">
+                <div class="value-card-inner">
+                    <div class="value-icon-modern">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>On-Time Delivery</h3>
+                    <p>Every timeline met, every schedule followed perfectly.</p>
+                </div>
+            </div>
+
+            <div class="value-card-modern">
+                <div class="value-card-inner">
+                    <div class="value-icon-modern">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock assistance for complete peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section - Circular Profile Cards -->
+<section class="team-section-modern">
+    <div class="container">
+        <div class="section-header-center">
+            <div class="section-label-center">
+                <span class="label-icon"><i class="fas fa-users"></i></span>
+                <span class="label-text">Meet The Experts</span>
+            </div>
+            <h2 class="section-title-modern">Our <span class="highlight">Creative</span> Team</h2>
+            <div class="title-underline-center"></div>
+            <p class="section-subtitle-modern">Passionate professionals dedicated to your success</p>
+        </div>
+
+        <div class="team-grid-modern">
+            <!-- Team Member 1 -->
+            <div class="team-card-modern">
+                <div class="team-card-front">
+                    <div class="team-image-circle" onclick="openFullscreen('https://img.freepik.com/free-photo/handsome-businessman-wearing-glasses-standing-with-hand-pocket-one-way-pointing-aside-happy-white-studio-background_231208-12569.jpg')">
+                        <img src="https://img.freepik.com/free-photo/handsome-businessman-wearing-glasses-standing-with-hand-pocket-one-way-pointing-aside-happy-white-studio-background_231208-12569.jpg" alt="Noyon Hasan">
+                        <div class="team-badge-role">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="team-info-modern">
+                        <h3>Noyon Hasan</h3>
+                        <p class="team-position-modern">Senior Event Planner</p>
+                        <p class="team-bio-modern">8 years of expertise in creating seamless events and transforming visions into reality.</p>
+                        <div class="team-stats-modern">
+                            <div class="stat-modern">
+                                <strong>150+</strong>
+                                <span>Events</span>
+                            </div>
+                            <div class="stat-modern">
+                                <strong>8</strong>
+                                <span>Years</span>
+                            </div>
+                            <div class="stat-modern">
+                                <strong>98%</strong>
+                                <span>Rating</span>
+                            </div>
+                        </div>
+                        <div class="team-social-modern">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card-modern">
+                <div class="team-card-front">
+                    <div class="team-image-circle" onclick="openFullscreen('https://img.freepik.com/free-photo/portrait-indian-happy-businessman-using-laptop-computer-office_231208-2580.jpg')">
+                        <img src="https://img.freepik.com/free-photo/portrait-indian-happy-businessman-using-laptop-computer-office_231208-2580.jpg" alt="Rifat Hasan">
+                        <div class="team-badge-role">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <div class="team-info-modern">
+                        <h3>Rifat Hasan</h3>
+                        <p class="team-position-modern">Creative Director</p>
+                        <p class="team-bio-modern">Artistic vision and innovation expert ensuring unique identity for every event.</p>
+                        <div class="team-stats-modern">
+                            <div class="stat-modern">
+                                <strong>200+</strong>
+                                <span>Designs</span>
+                            </div>
+                            <div class="stat-modern">
+                                <strong>10</strong>
+                                <span>Years</span>
+                            </div>
+                            <div class="stat-modern">
+                                <strong>15</strong>
+                                <span>Awards</span>
+                            </div>
+                        </div>
+                        <div class="team-social-modern">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card-modern">
+                <div class="team-card-front">
+                    <div class="team-image-circle" onclick="openFullscreen('https://img.freepik.com/free-photo/customer-service-cute-brunette-guy-suit-with-laptop-happy-touching-chin_140725-164987.jpg')">
+                        <img src="https://img.freepik.com/free-photo/customer-service-cute-brunette-guy-suit-with-laptop-happy-touching-chin_140725-164987.jpg" alt="Tonmoy Sarkar">
+                        <div class="team-badge-role">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <div class="team-info-modern">
+                        <h3>Tonmoy Sarkar</h3>
+                        <p class="team-position-modern">Operations Manager</p>
+                        <p class="team-bio-modern">Coordination expert managing vendor relationships and ensuring smooth execution.</p>
+                        <div class="team-stats-modern">
+                            <div class="stat-modern">
+                                <strong>180+</strong>
+                                <span>Projects</span>
+                            </div>
+                            <div class="stat-modern">
+                                <strong>7</strong>
+                                <span>Years</span>
+                            </div>
+                            <div class="stat-modern">
+                                <strong>100%</strong>
+                                <span>On-Time</span>
+                            </div>
+                        </div>
+                        <div class="team-social-modern">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section-modern">
+    <div class="cta-bg-pattern"></div>
+    <div class="container">
+        <div class="cta-content-modern">
+            <div class="cta-icon-large">
+                <i class="fas fa-phone-volume"></i>
+            </div>
+            <h2 class="cta-title-modern">Ready to Create <span class="highlight-white">Something Extraordinary?</span></h2>
+            <p class="cta-text-modern">Let's bring your vision to life. Contact us today for a free consultation.</p>
+            <div class="cta-buttons-modern">
+                <a href="contact us.html" class="btn-cta-modern btn-primary-cta">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Schedule Consultation</span>
+                </a>
+                <a href="index.html#packages" class="btn-cta-modern btn-secondary-cta">
+                    <i class="fas fa-eye"></i>
+                    <span>View Packages</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="./img/logo 1.png" alt="HR Events" width="60">
+                            <h3>HR Events</h3>
+                        </div>
+                        <p class="footer-description">Premier event management company specializing in weddings, corporate events, and celebrations. Creating unforgettable experiences since 2015.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                            <li><a href="About us.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                            <li><a href="index.html#services"><i class="fas fa-angle-right"></i> Services</a></li>
+                            <li><a href="index.html#packages"><i class="fas fa-angle-right"></i> Packages</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Our Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Wedding Planning</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Corporate Events</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Theme Parties</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Reception Planning</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Event Decoration</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Main Street<br>Mumbai, India 400001</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+91 123 456 7890</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@hrevents.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon - Sat: 9AM - 8PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">&copy; 2025 HR Event Management. All Rights Reserved.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+// Fullscreen Image Viewer
+function openFullscreen(imageSrc) {
+    const viewer = document.getElementById('fullscreenViewer');
+    const image = document.getElementById('fullscreenImage');
+    image.src = imageSrc;
+    viewer.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeFullscreen() {
+    const viewer = document.getElementById('fullscreenViewer');
+    viewer.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+document.getElementById('fullscreenViewer').addEventListener('click', function(e) {
+    if (e.target === this) closeFullscreen();
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeFullscreen();
+});
+
+// Counter Animation
+function animateCounter() {
+    const counters = document.querySelectorAll('.ticker-number');
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        updateCounter();
+    });
+}
+
+// Trigger counter animation when visible
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounter();
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+const statsSection = document.querySelector('.stats-ticker');
+if (statsSection) observer.observe(statsSection);
+</script>
+
+</body>
+</html>

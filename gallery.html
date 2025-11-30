@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - HR Event Management</title>
+
+    <!-- favicon-->
+    <link rel="shortcut icon" href="./img/logo 1.png" type="image/svg+xml">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar Section -->  
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/logo 1.png" alt="HR Event Management Logo" width="65" height="65">
+            <div class="brand-content">
+                <span class="brand-text">HR Events</span>
+                <span class="brand-tagline">Creating Magical Moments</span>
+            </div>
+        </a>
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About us.html">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FAQ.html">
+                        <i class="fas fa-question-circle"></i> FAQ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="gallery.html">
+                        <i class="fas fa-images"></i> Gallery
+                    </a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="btn btn-book-now" href="contact us.html">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Hero with Diagonal Design -->
+<section class="page-hero">
+    <div class="hero-background">
+        <div class="diagonal-shape shape-1"></div>
+        <div class="diagonal-shape shape-2"></div>
+        <div class="diagonal-shape shape-3"></div>
+    </div>
+    <div class="hero-particles-canvas"></div>
+    <div class="hero-content">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-text-content">
+                        <div class="hero-badge-modern">
+                            <span class="badge-icon"><i class="fas fa-camera-retro"></i></span>
+                            <span class="badge-text">Our Portfolio</span>
+                        </div>
+                        <h1 class="hero-title-modern">
+                            <span class="title-line-1">Event</span>
+                            <span class="title-line-2">Gallery</span>
+                        </h1>
+                        <p class="hero-subtitle-modern">Explore our stunning collection of memorable events & celebrations that we've brought to life</p>
+                        <div class="hero-breadcrumb-modern">
+                            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                            <span class="breadcrumb-separator"><i class="fas fa-angle-double-right"></i></span>
+                            <span class="breadcrumb-current">Gallery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="hero-stats-modern">
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" data-count="500">0</h3>
+                                <p class="stat-label">Events Completed</p>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="stat-icon">
+                                <i class="fas fa-smile-beam"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" data-count="450">0</h3>
+                                <p class="stat-label">Happy Clients</p>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" data-count="10">0</h3>
+                                <p class="stat-label">Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-curve">
+        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff" d="M0,32L48,42.7C96,53,192,75,288,74.7C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Gallery Filter Section -->
+<section class="gallery-filter-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge-wrapper">
+                <span class="section-badge">
+                    <i class="fas fa-filter"></i> Browse Collections
+                </span>
+            </div>
+            <h2 class="section-title">Explore Our <span class="title-highlight">Events</span></h2>
+            <div class="title-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon"><i class="fas fa-star"></i></span>
+                <span class="divider-line"></span>
+            </div>
+            <p class="section-subtitle">Filter by category to view specific event types</p>
+        </div>
+
+        <div class="filter-container" data-aos="fade-up" data-aos-delay="200">
+            <button class="filter-btn active" data-filter="all">
+                <span class="btn-icon"><i class="fas fa-th"></i></span>
+                <span class="btn-text">All Events</span>
+                <span class="btn-count">12</span>
+            </button>
+            <button class="filter-btn" data-filter="weddings">
+                <span class="btn-icon"><i class="fas fa-heart"></i></span>
+                <span class="btn-text">Weddings</span>
+                <span class="btn-count">3</span>
+            </button>
+            <button class="filter-btn" data-filter="corporate">
+                <span class="btn-icon"><i class="fas fa-briefcase"></i></span>
+                <span class="btn-text">Corporate</span>
+                <span class="btn-count">2</span>
+            </button>
+            <button class="filter-btn" data-filter="parties">
+                <span class="btn-icon"><i class="fas fa-glass-cheers"></i></span>
+                <span class="btn-text">Parties</span>
+                <span class="btn-count">3</span>
+            </button>
+            <button class="filter-btn" data-filter="decorations">
+                <span class="btn-icon"><i class="fas fa-star"></i></span>
+                <span class="btn-text">Decorations</span>
+                <span class="btn-count">2</span>
+            </button>
+            <button class="filter-btn" data-filter="venues">
+                <span class="btn-icon"><i class="fas fa-building"></i></span>
+                <span class="btn-text">Venues</span>
+                <span class="btn-count">2</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Grid Section -->
+<section class="gallery-grid-section">
+    <div class="container">
+        <div class="gallery-grid">
+            
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item" data-category="weddings" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/15.jpg" alt="Royal Wedding Setup">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-heart"></i> Weddings</span>
+                            <h3 class="gallery-title">Royal Wedding Setup</h3>
+                            <p class="gallery-description">Elegant decoration with royal theme</p>
+                            <button class="view-btn" data-index="0">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item" data-category="corporate" data-aos="zoom-in" data-aos-delay="150">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/R.jpg" alt="Corporate Conference">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-briefcase"></i> Corporate</span>
+                            <h3 class="gallery-title">Corporate Conference</h3>
+                            <p class="gallery-description">Professional business event setup</p>
+                            <button class="view-btn" data-index="1">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item" data-category="parties" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/5.jpg" alt="Grand Reception">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-glass-cheers"></i> Parties</span>
+                            <h3 class="gallery-title">Grand Reception</h3>
+                            <p class="gallery-description">Luxury reception party arrangement</p>
+                            <button class="view-btn" data-index="2">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item" data-category="decorations" data-aos="zoom-in" data-aos-delay="250">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/4.jpg" alt="Theme Decoration">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-star"></i> Decorations</span>
+                            <h3 class="gallery-title">Elegant Theme Décor</h3>
+                            <p class="gallery-description">Beautiful themed decoration design</p>
+                            <button class="view-btn" data-index="3">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item" data-category="weddings" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/images.jpg" alt="Wedding Ceremony">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-heart"></i> Weddings</span>
+                            <h3 class="gallery-title">Traditional Wedding</h3>
+                            <p class="gallery-description">Classic wedding ceremony setup</p>
+                            <button class="view-btn" data-index="4">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item" data-category="venues" data-aos="zoom-in" data-aos-delay="350">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/OIP (1).jpg" alt="Event Venue">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-building"></i> Venues</span>
+                            <h3 class="gallery-title">Premium Venue</h3>
+                            <p class="gallery-description">Luxury event venue arrangement</p>
+                            <button class="view-btn" data-index="5">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 7 -->
+            <div class="gallery-item" data-category="parties" data-aos="zoom-in" data-aos-delay="400">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/2.jpg" alt="Birthday Party">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-glass-cheers"></i> Parties</span>
+                            <h3 class="gallery-title">Birthday Celebration</h3>
+                            <p class="gallery-description">Fun birthday party decoration</p>
+                            <button class="view-btn" data-index="6">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 8 -->
+            <div class="gallery-item" data-category="decorations" data-aos="zoom-in" data-aos-delay="450">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/images (1).jpg" alt="Floral Decoration">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-star"></i> Decorations</span>
+                            <h3 class="gallery-title">Floral Arrangements</h3>
+                            <p class="gallery-description">Premium floral decoration setup</p>
+                            <button class="view-btn" data-index="7">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 9 -->
+            <div class="gallery-item" data-category="weddings" data-aos="zoom-in" data-aos-delay="500">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/1.jpg" alt="Wedding Stage">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-heart"></i> Weddings</span>
+                            <h3 class="gallery-title">Wedding Stage Setup</h3>
+                            <p class="gallery-description">Beautiful wedding stage decoration</p>
+                            <button class="view-btn" data-index="8">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 10 -->
+            <div class="gallery-item" data-category="corporate" data-aos="zoom-in" data-aos-delay="550">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/3.jpg" alt="Conference">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-briefcase"></i> Corporate</span>
+                            <h3 class="gallery-title">Business Conference</h3>
+                            <p class="gallery-description">Professional conference setup</p>
+                            <button class="view-btn" data-index="9">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 11 -->
+            <div class="gallery-item" data-category="parties" data-aos="zoom-in" data-aos-delay="600">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/15.jpg" alt="Cocktail Party">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-glass-cheers"></i> Parties</span>
+                            <h3 class="gallery-title">Cocktail Evening</h3>
+                            <p class="gallery-description">Elegant cocktail party setup</p>
+                            <button class="view-btn" data-index="10">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 12 -->
+            <div class="gallery-item" data-category="venues" data-aos="zoom-in" data-aos-delay="650">
+                <div class="gallery-wrapper">
+                    <div class="gallery-image">
+                        <img src="./img/5.jpg" alt="Banquet Hall">
+                        <div class="image-gradient"></div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="gallery-category"><i class="fas fa-building"></i> Venues</span>
+                            <h3 class="gallery-title">Luxury Banquet Hall</h3>
+                            <p class="gallery-description">Premium banquet hall decoration</p>
+                            <button class="view-btn" data-index="11">
+                                <i class="fas fa-search-plus"></i>
+                                <span>View Image</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+        <button class="lightbox-close" id="closeLightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <button class="lightbox-prev" id="prevImage">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="lightbox-image-container">
+            <img src="" alt="Gallery Image" id="lightboxImage">
+            <div class="lightbox-loader">
+                <div class="loader-spinner"></div>
+            </div>
+            <div class="lightbox-info">
+                <div class="info-content">
+                    <span class="info-category" id="lightboxCategory"></span>
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxDescription"></p>
+                </div>
+            </div>
+        </div>
+        
+        <button class="lightbox-next" id="nextImage">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="lightbox-counter">
+            <span id="currentIndex">1</span> / <span id="totalImages">12</span>
+        </div>
+        
+        <div class="lightbox-thumbnails" id="lightboxThumbnails">
+            <!-- Thumbnails will be generated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section" data-aos="fade-up">
+    <div class="container">
+        <div class="cta-content text-center">
+            <div class="cta-icon">
+                <i class="fas fa-camera"></i>
+            </div>
+            <h2 class="cta-title">Want Your Event Featured Here?</h2>
+            <p class="cta-text">Let us create beautiful memories for your special occasion. Contact us today and let's make magic together!</p>
+            <div class="cta-buttons">
+                <a href="contact us.html" class="btn btn-cta-primary">
+                    <i class="fas fa-calendar-alt"></i> Book Your Event
+                </a>
+                <a href="index.html#packages" class="btn btn-cta-secondary">
+                    <i class="fas fa-gift"></i> View Packages
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="./img/logo 1.png" alt="HR Events" width="60">
+                            <h3>HR Events</h3>
+                        </div>
+                        <p class="footer-description">Premier event management company specializing in weddings, corporate events, and celebrations. Creating unforgettable experiences since 2015.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                            <li><a href="About us.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                            <li><a href="index.html#services"><i class="fas fa-angle-right"></i> Services</a></li>
+                            <li><a href="index.html#packages"><i class="fas fa-angle-right"></i> Packages</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Our Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Wedding Planning</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Corporate Events</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Theme Parties</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Reception Planning</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Event Decoration</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Main Street<br>Mumbai, India 400001</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+91 123 456 7890</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@hrevents.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon - Sat: 9AM - 8PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">&copy; 2025 HR Event Management. All Rights Reserved.</p>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- AOS Animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+</script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/gallery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Event Management - Premium Wedding & Event Services</title>
+
+    <!-- favicon-->
+    <link rel="shortcut icon" href="./img/logo 1.png" type="image/svg+xml">
+
+    <!--External CSS link-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <!-- Fonts link  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Fullscreen Image Viewer Styles */
+        .fullscreen-viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .fullscreen-viewer.active {
+            display: flex;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .fullscreen-viewer img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            transform: scale(0.8);
+            animation: zoomIn 0.4s ease forwards;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .fullscreen-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .fullscreen-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .fullscreen-close i {
+            color: #fff;
+            font-size: 24px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Enhanced Gallery Grid - Asymmetric Masonry Layout */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            grid-auto-flow: dense;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15) rotate(2deg);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.8) 0%, rgba(237, 33, 124, 0.8) 100%);
+            opacity: 0;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-content {
+            text-align: center;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-content {
+            transform: translateY(0);
+        }
+
+        .gallery-content i {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        .gallery-content h4 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            
+            .fullscreen-close {
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Fullscreen Image Viewer -->
+<div class="fullscreen-viewer" id="fullscreenViewer">
+    <div class="fullscreen-close" onclick="closeFullscreen()">
+        <i class="fas fa-times"></i>
+    </div>
+    <img src="" alt="Fullscreen Image" id="fullscreenImage">
+</div>
+
+<!-- Navbar Section -->  
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/logo 1.png" alt="HR Event Management Logo" width="65" height="65">
+            <div class="brand-content">
+                <span class="brand-text">HR Events</span>
+                <span class="brand-tagline">Creating Magical Moments</span>
+            </div>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About us.html">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FAQ.html">
+                        <i class="fas fa-question-circle"></i> FAQ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">
+                        <i class="fas fa-images"></i> Gallery
+                    </a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="btn btn-book-now" href="contact us.html">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <img src="./img/4.jpg" class="d-block w-100" alt="Wedding Decoration" onclick="openFullscreen(this.src)">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption-custom">
+                <div class="caption-content">
+                    <span class="caption-subtitle animate-fade-in">Welcome to HR Events</span>
+                    <h1 class="caption-title animate-slide-up">Creating Unforgettable Moments</h1>
+                    <p class="caption-text animate-slide-up-delay">Transform your dreams into reality with our premium event management services</p>
+                    <div class="caption-buttons animate-fade-in-delay">
+                        <a href="contact us.html" class="btn btn-hero-primary">
+                            <i class="fas fa-calendar-alt"></i> Plan Your Event
+                        </a>
+                        <a href="About us.html" class="btn btn-hero-secondary">
+                            <i class="fas fa-play-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <img src="./img/5.jpg" class="d-block w-100" alt="Corporate Event" onclick="openFullscreen(this.src)">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption-custom">
+                <div class="caption-content">
+                    <span class="caption-subtitle animate-fade-in">Professional Excellence</span>
+                    <h1 class="caption-title animate-slide-up">Corporate Events Done Right</h1>
+                    <p class="caption-text animate-slide-up-delay">From conferences to celebrations - we handle every detail with perfection</p>
+                    <div class="caption-buttons animate-fade-in-delay">
+                        <a href="contact us.html" class="btn btn-hero-primary">
+                            <i class="fas fa-briefcase"></i> Get Started
+                        </a>
+                        <a href="FAQ.html" class="btn btn-hero-secondary">
+                            <i class="fas fa-question-circle"></i> FAQ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <img src="./img/3.jpg" class="d-block w-100" alt="Reception Party" onclick="openFullscreen(this.src)">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption-custom">
+                <div class="caption-content">
+                    <span class="caption-subtitle animate-fade-in">Your Vision, Our Expertise</span>
+                    <h1 class="caption-title animate-slide-up">Celebrations That Last Forever</h1>
+                    <p class="caption-text animate-slide-up-delay">Expert wedding planners dedicated to making your special day perfect</p>
+                    <div class="caption-buttons animate-fade-in-delay">
+                        <a href="contact us.html" class="btn btn-hero-primary">
+                            <i class="fas fa-heart"></i> Start Planning
+                        </a>
+                        <a href="gallery.html" class="btn btn-hero-secondary">
+                            <i class="fas fa-images"></i> View Gallery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- Quick Stats Bar -->
+<div class="stats-bar">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="500">0</h3>
+                    <p class="stat-label">Events Completed</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="450">0</h3>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="15">0</h3>
+                    <p class="stat-label">Awards Won</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="10">0</h3>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section (UPDATED WITH ATTRACTIVE CARDS) -->
+<section class="services-section" id="services">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">What We Offer</span>
+            <h2 class="section-title">Our Premium Services</h2>
+            <div class="title-divider"></div>
+            <p class="section-subtitle">Comprehensive event management solutions tailored to perfection</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Service 1 - Wedding Ceremonies -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-image" onclick="openFullscreen('./img/15.jpg')">
+                        <img src="./img/15.jpg" alt="Wedding Ceremonies">
+                        <div class="service-gradient"></div>
+                        <div class="service-badge">
+                            <i class="fas fa-star"></i> Popular
+                        </div>
+                    </div>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Wedding Ceremonies</h3>
+                        <p class="service-description">Create your dream wedding with personalized decoration, theme selection, and complete management from start to finish.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Custom Decoration</li>
+                            <li><i class="fas fa-check-circle"></i> Theme Planning</li>
+                            <li><i class="fas fa-check-circle"></i> Full Coordination</li>
+                        </ul>
+                        <a href="contact us.html" class="service-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 - Reception & Cocktail -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-image" onclick="openFullscreen('./img/5.jpg')">
+                        <img src="./img/5.jpg" alt="Reception Parties">
+                        <div class="service-gradient"></div>
+                        <div class="service-badge badge-premium">
+                            <i class="fas fa-crown"></i> Premium
+                        </div>
+                    </div>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Reception & Cocktail</h3>
+                        <p class="service-description">Elegant receptions with warm atmosphere, premium décor, and seamless coordination for unforgettable celebrations.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Premium Setup</li>
+                            <li><i class="fas fa-check-circle"></i> Bar Services</li>
+                            <li><i class="fas fa-check-circle"></i> Entertainment</li>
+                        </ul>
+                        <a href="contact us.html" class="service-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 - Theme Parties -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-image" onclick="openFullscreen('./img/4.jpg')">
+                        <img src="./img/4.jpg" alt="Theme Parties">
+                        <div class="service-gradient"></div>
+                        <div class="service-badge badge-trending">
+                            <i class="fas fa-fire"></i> Trending
+                        </div>
+                    </div>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Theme Parties</h3>
+                        <p class="service-description">Bring your theme to life with creative concepts, stunning décor, and immersive experiences that wow your guests.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Creative Themes</li>
+                            <li><i class="fas fa-check-circle"></i> Custom Props</li>
+                            <li><i class="fas fa-check-circle"></i> Full Entertainment</li>
+                        </ul>
+                        <a href="contact us.html" class="service-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 - Corporate Events -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-image" onclick="openFullscreen('./img/R.jpg')">
+                        <img src="./img/R.jpg" alt="Corporate Events">
+                        <div class="service-gradient"></div>
+                        <div class="service-badge badge-pro">
+                            <i class="fas fa-briefcase"></i> Pro
+                        </div>
+                    </div>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Corporate Events</h3>
+                        <p class="service-description">Professional solutions for conferences, meetings, and business celebrations with flawless execution and tech support.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Professional Setup</li>
+                            <li><i class="fas fa-check-circle"></i> Tech Support</li>
+                            <li><i class="fas fa-check-circle"></i> Full Management</li>
+                        </ul>
+                        <a href="contact us.html" class="service-btn">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Packages Section -->
+<section class="packages-section" id="packages">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge-light">Flexible Options</span>
+            <h2 class="section-title-light">Choose Your Perfect Package</h2>
+            <div class="title-divider-light"></div>
+            <p class="section-subtitle-light">Tailored packages to fit your vision and budget</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Basic Package -->
+            <div class="col-lg-4 col-md-6">
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Basic Package</h3>
+                        <p class="package-tagline">Perfect for intimate events</p>
+                    </div>
+                    <div class="package-price">
+                        <span class="currency">₹</span>
+                        <span class="amount">50,000</span>
+                        <span class="period">Starting from</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Event Planning & Coordination</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Basic Decoration Setup</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>RSVP Management</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Vendor Coordination</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Event Timeline Planning</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Basic Sound System</span>
+                        </li>
+                    </ul>
+                    <a href="contact us.html" class="package-btn">
+                        Choose Package <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Standard Package (Featured) -->
+            <div class="col-lg-4 col-md-6">
+                <div class="package-card featured">
+                    <div class="package-badge">
+                        <i class="fas fa-crown"></i> Most Popular
+                    </div>
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Standard Package</h3>
+                        <p class="package-tagline">Best value for your event</p>
+                    </div>
+                    <div class="package-price">
+                        <span class="currency">₹</span>
+                        <span class="amount">1,50,000</span>
+                        <span class="period">Starting from</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Everything in Basic Package</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium Decoration & Lighting</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional Photography</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Catering Coordination</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Email & SMS Reminders</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>DJ & Entertainment</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Guest Management System</span>
+                        </li>
+                    </ul>
+                    <a href="contact us.html" class="package-btn">
+                        Choose Package <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Premium Package -->
+            <div class="col-lg-4 col-md-6">
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Premium Package</h3>
+                        <p class="package-tagline">Ultimate luxury experience</p>
+                    </div>
+                    <div class="package-price">
+                        <span class="currency">₹</span>
+                        <span class="amount">3,00,000</span>
+                        <span class="period">Starting from</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Everything in Standard Package</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Luxury Decoration & Setup</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Photo + Video Coverage</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium Catering Options</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>VIP Guest Management</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Live Entertainment Artists</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Drone Photography/Video</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Wedding Website Creation</span>
+                        </li>
+                    </ul>
+                    <a href="contact us.html" class="package-btn">
+                        Choose Package <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Client Stories</span>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="title-divider"></div>
+            <p class="section-subtitle">Real experiences from our satisfied customers</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"HR Event Management made our wedding day absolutely perfect! From decoration to coordination, everything was flawless. The team was professional, creative, and attentive to every detail."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>Rajesh Kumar</h4>
+                        <p>Wedding Client</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"We hired HR Events for our annual corporate conference. They exceeded all expectations! The venue setup was impressive, timing was perfect, and attendee management was seamless."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>Priya Sharma</h4>
+                        <p>Corporate Event</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Outstanding service from start to finish! Our reception party was elegant, well-organized, and memorable. The team handled everything professionally - décor, catering, entertainment."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>Amit Patel</h4>
+                        <p>Reception Party</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section" id="gallery">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Our Work</span>
+            <h2 class="section-title">Event Gallery</h2>
+            <div class="title-divider"></div>
+            <p class="section-subtitle">Glimpses of beautiful moments we've created</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openFullscreen('./img/images.jpg')">
+                <img src="./img/images.jpg" alt="Event Gallery">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-search-plus"></i>
+                        <h4>Wedding Ceremony</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openFullscreen('./img/OIP (1).jpg')">
+                <img src="./img/OIP (1).jpg" alt="Event Gallery">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-search-plus"></i>
+                        <h4>Corporate Event</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openFullscreen('./img/5.jpg')">
+                <img src="./img/5.jpg" alt="Event Gallery">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-search-plus"></i>
+                        <h4>Reception Party</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openFullscreen('./img/R.jpg')">
+                <img src="./img/R.jpg" alt="Event Gallery">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-search-plus"></i>
+                        <h4>Theme Decoration</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openFullscreen('./img/15.jpg')">
+                <img src="./img/15.jpg" alt="Event Gallery">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-search-plus"></i>
+                        <h4>Wedding Setup</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openFullscreen('./img/4.jpg')">
+                <img src="./img/4.jpg" alt="Event Gallery">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-search-plus"></i>
+                        <h4>Grand Celebration</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="gallery.html" class="btn btn-view-more">
+                View Full Gallery <i class="fas fa-images"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="cta-content">
+                    <div class="cta-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <h2 class="cta-title">Ready to Plan Your Dream Event?</h2>
+                    <p class="cta-text">Let's create something extraordinary together! Contact us today for a free consultation and quote.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 text-lg-end text-center">
+                <a href="contact us.html" class="btn btn-cta-large">
+                    <i class="fas fa-calendar-check"></i> Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="./img/logo 1.png" alt="HR Events" width="60">
+                            <h3>HR Events</h3>
+                        </div>
+                        <p class="footer-description">Premier event management company specializing in weddings, corporate events, and celebrations. Creating unforgettable experiences since 2015.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                            <li><a href="About us.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                            <li><a href="#services"><i class="fas fa-angle-right"></i> Services</a></li>
+                            <li><a href="#packages"><i class="fas fa-angle-right"></i> Packages</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Our Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Wedding Planning</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Corporate Events</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Theme Parties</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Reception Planning</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Event Decoration</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Main Street<br>Mumbai, India 400001</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+91 123 456 7890</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@hrevents.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon - Sat: 9AM - 8PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">&copy; 2025 HR Event Management. All Rights Reserved.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+// Fullscreen Image Viewer Functions
+function openFullscreen(imageSrc) {
+    const viewer = document.getElementById('fullscreenViewer');
+    const image = document.getElementById('fullscreenImage');
+    image.src = imageSrc;
+    viewer.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeFullscreen() {
+    const viewer = document.getElementById('fullscreenViewer');
+    viewer.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close on background click
+document.getElementById('fullscreenViewer').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeFullscreen();
+    }
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeFullscreen();
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - HR Event Management</title>
+
+    <!-- favicon-->
+    <link rel="shortcut icon" href="./img/logo 1.png" type="image/svg+xml">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="FAQ.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar Section -->  
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/logo 1.png" alt="HR Event Management Logo" width="65" height="65">
+            <div class="brand-content">
+                <span class="brand-text">HR Events</span>
+                <span class="brand-tagline">Creating Magical Moments</span>
+            </div>
+        </a>
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About us.html">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="FAQ.html">
+                        <i class="fas fa-question-circle"></i> FAQ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">
+                        <i class="fas fa-images"></i> Gallery
+                    </a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="btn btn-book-now" href="contact us.html">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="hero-particles"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="container">
+            <div class="hero-text">
+                <div class="hero-badge-container">
+                    <span class="hero-badge">
+                        <i class="fas fa-question-circle"></i> Got Questions?
+                    </span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-main">Frequently Asked</span>
+                    <span class="title-sub">Questions</span>
+                </h1>
+                <p class="hero-subtitle">Find answers to common questions about our services</p>
+                <div class="hero-breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current">FAQ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-shape">
+        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff" d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,80C672,85,768,75,864,64C960,53,1056,43,1152,42.7C1248,43,1344,53,1392,58.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Search & Filter Bar -->
+<section class="search-filter-section">
+    <div class="container">
+        <div class="search-filter-wrapper">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="faqSearch" placeholder="Search for questions...">
+            </div>
+            <div class="filter-dropdown">
+                <button class="filter-dropdown-btn" id="categoryDropdown">
+                    <i class="fas fa-filter"></i> All Categories
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="filter-dropdown-menu">
+                    <button class="filter-option active" data-filter="all">All Categories</button>
+                    <button class="filter-option" data-filter="general">General</button>
+                    <button class="filter-option" data-filter="booking">Booking</button>
+                    <button class="filter-option" data-filter="pricing">Pricing</button>
+                    <button class="filter-option" data-filter="planning">Planning</button>
+                    <button class="filter-option" data-filter="services">Services</button>
+                    <button class="filter-option" data-filter="payment">Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Accordion Section -->
+<section class="faq-accordion-section">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Left Column -->
+            <div class="col-lg-6">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>What Types of Events Do You Manage?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We specialize in a wide range of events including weddings, receptions, corporate conferences, theme parties, birthday celebrations, cultural events, and college festivals. Whatever your occasion, we have the expertise to make it memorable and flawless.</p>
+                        <div class="faq-tags">
+                            <span class="tag">Weddings</span>
+                            <span class="tag">Corporate</span>
+                            <span class="tag">Parties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item" data-category="booking">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>How Far in Advance Should I Book?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend booking 3-6 months in advance for weddings and large events. For corporate events and smaller celebrations, 2-3 months notice is ideal. However, we can accommodate last-minute requests based on availability.</p>
+                        <div class="faq-highlight">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Pro Tip: Book early to secure your preferred date and vendors!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Do You Provide Services Outside Your City?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We provide event management services across India. Additional travel and accommodation charges may apply for outstation events. Contact us to discuss your specific location requirements.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item" data-category="pricing">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3>What's Included in Your Packages?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our packages vary by tier:</p>
+                        <ul class="faq-list">
+                            <li><i class="fas fa-check"></i> <strong>Basic:</strong> Planning and decoration</li>
+                            <li><i class="fas fa-check"></i> <strong>Standard:</strong> + Photography and catering coordination</li>
+                            <li><i class="fas fa-check"></i> <strong>Premium:</strong> Everything + videography, advanced decor, VIP management</li>
+                        </ul>
+                        <p>All packages are fully customizable to your needs.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item" data-category="pricing">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h3>Can I Customize My Event Package?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer fully customizable packages tailored to your requirements and budget. Mix and match services from different packages or request additional services. Your vision is our priority.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item" data-category="payment">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>What's Your Payment Structure?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our payment structure is designed for your convenience:</p>
+                        <div class="payment-timeline">
+                            <div class="timeline-step">
+                                <span class="step-number">30%</span>
+                                <span class="step-text">Advance to confirm booking</span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-number">40%</span>
+                                <span class="step-text">One month before event</span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-number">30%</span>
+                                <span class="step-text">After event completion</span>
+                            </div>
+                        </div>
+                        <p>We accept bank transfers, UPI, and credit/debit cards. Custom payment plans available for large events.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-lg-6">
+                <!-- FAQ Item 7 -->
+                <div class="faq-item" data-category="planning">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>How Does the Planning Process Work?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our streamlined planning process ensures a stress-free experience:</p>
+                        <ol class="faq-steps">
+                            <li><strong>Initial Consultation:</strong> We discuss your vision, preferences, and budget</li>
+                            <li><strong>Detailed Planning:</strong> Create comprehensive plan including theme, venue, vendors, and timeline</li>
+                            <li><strong>Regular Updates:</strong> Scheduled meetings to keep you informed</li>
+                            <li><strong>Event Execution:</strong> Our team handles all logistics on the day</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Do You Help With Venue Selection?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We have partnerships with premium venues across multiple cities. We'll recommend venues based on your requirements, guest count, budget, and event type. We can also work with your chosen venue.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Do You Work With External Vendors?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we coordinate with your preferred vendors. We also have a network of 200+ trusted, verified vendors for catering, photography, decoration, and entertainment. We ensure all vendors meet our quality standards.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="faq-item" data-category="booking">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <h3>What's Your Cancellation Policy?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our cancellation policy is as follows:</p>
+                        <div class="cancellation-table">
+                            <div class="cancellation-row">
+                                <span class="days">60+ days</span>
+                                <span class="refund">70% Refund</span>
+                            </div>
+                            <div class="cancellation-row">
+                                <span class="days">30-60 days</span>
+                                <span class="refund">50% Refund</span>
+                            </div>
+                            <div class="cancellation-row">
+                                <span class="days">Within 30 days</span>
+                                <span class="refund">Non-refundable</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 11 -->
+                <div class="faq-item" data-category="services">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h3>What Additional Services Do You Offer?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer comprehensive add-on services:</p>
+                        <div class="services-grid">
+                            <span><i class="fas fa-car"></i> Transportation</span>
+                            <span><i class="fas fa-hotel"></i> Accommodation</span>
+                            <span><i class="fas fa-users"></i> Guest Management</span>
+                            <span><i class="fas fa-shield-alt"></i> Security</span>
+                            <span><i class="fas fa-video"></i> Live Streaming</span>
+                            <span><i class="fas fa-camera"></i> Drone Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 12 -->
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <div class="faq-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>How Much Experience Do You Have?</h3>
+                        <div class="faq-toggle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We have over 10 years of experience in the event management industry. Our achievements include:</p>
+                        <div class="experience-stats">
+                            <div class="stat-box">
+                                <strong>500+</strong>
+                                <span>Events Completed</span>
+                            </div>
+                            <div class="stat-box">
+                                <strong>450+</strong>
+                                <span>Happy Clients</span>
+                            </div>
+                            <div class="stat-box">
+                                <strong>15+</strong>
+                                <span>Awards Won</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Help CTA -->
+<section class="quick-help-section">
+    <div class="container">
+        <div class="quick-help-card">
+            <div class="help-icon-large">
+                <i class="fas fa-life-ring"></i>
+            </div>
+            <h3>Still Have Questions?</h3>
+            <p>Can't find the answer you're looking for? Our team is here to help!</p>
+            <div class="help-buttons">
+                <a href="contact us.html" class="btn-help-primary">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+                <a href="tel:+911234567890" class="btn-help-secondary">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="./img/logo 1.png" alt="HR Events" width="60">
+                            <h3>HR Events</h3>
+                        </div>
+                        <p class="footer-description">Premier event management company specializing in weddings, corporate events, and celebrations. Creating unforgettable experiences since 2015.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                            <li><a href="About us.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                            <li><a href="index.html#services"><i class="fas fa-angle-right"></i> Services</a></li>
+                            <li><a href="index.html#packages"><i class="fas fa-angle-right"></i> Packages</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Our Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Wedding Planning</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Corporate Events</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Theme Parties</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Reception Planning</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Event Decoration</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Main Street<br>Mumbai, India 400001</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+91 123 456 7890</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@hrevents.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon - Sat: 9AM - 8PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright">&copy; 2025 HR Event Management. All Rights Reserved.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+// FAQ Accordion Toggle
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+    });
+});
+
+// Search Functionality
+document.getElementById('faqSearch').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const question = item.querySelector('h3').textContent.toLowerCase();
+        const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+        
+        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
+
+// Category Filter
+document.querySelectorAll('.filter-option').forEach(option => {
+    option.addEventListener('click', function() {
+        const filter = this.dataset.filter;
+        
+        // Update active state
+        document.querySelectorAll('.filter-option').forEach(opt => opt.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Update dropdown button text
+        document.getElementById('categoryDropdown').innerHTML = `
+            <i class="fas fa-filter"></i> ${this.textContent}
+            <i class="fas fa-chevron-down"></i>
+        `;
+        
+        // Filter FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (filter === 'all' || item.dataset.category === filter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        
+        // Close dropdown
+        document.querySelector('.filter-dropdown-menu').classList.remove('show');
+    });
+});
+
+// Dropdown Toggle
+document.getElementById('categoryDropdown').addEventListener('click', function() {
+    document.querySelector('.filter-dropdown-menu').classList.toggle('show');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.filter-dropdown')) {
+        document.querySelector('.filter-dropdown-menu').classList.remove('show');
+    }
+});
+</script>
+
+</body>
+</html>
